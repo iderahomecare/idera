@@ -1,0 +1,10 @@
+const cfg = window.IDERA_CONFIG || {};
+const ready = cfg.supabaseUrl && !cfg.supabaseUrl.startsWith("YOUR_") && cfg.supabaseAnonKey && !cfg.supabaseAnonKey.startsWith("YOUR_");
+const db = ready && window.supabase ? window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey) : null;
+document.getElementById("year").textContent = new Date().getFullYear();
+const toggle = document.querySelector(".menu-toggle");
+toggle?.addEventListener("click",()=>{const nav=document.querySelector("nav");nav.classList.toggle("open");toggle.setAttribute("aria-expanded",nav.classList.contains("open"));});
+document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector("nav").classList.remove("open")));
+async function loadGallery(){const grid=document.getElementById("gallery-grid");if(!db)return;const {data,error}=await db.from("gallery_items").select("id,title,description, image_url").eq("published",true).order("created_at",{ascending:false});if(error||!data?.length)return;grid.innerHTML="";data.forEach(item=>{const card=document.createElement("article");card.className="gallery-item";const img=document.createElement("img");img.src=item.image_url;img.alt=item.title||"IDERA gallery photograph";const p=document.createElement("p");p.textContent=item.title||item.description||"";card.append(img,p);grid.append(card);});}
+loadGallery();
+document.getElementById("enquiry-form").addEventListener("submit",async e=>{e.preventDefault();const status=document.getElementById("form-status");if(!db){status.textContent="The enquiry form is not connected yet. Please contact us directly.";return;}const f=new FormData(e.target);const {error}=await db.from("enquiries").insert({name:f.get("name"),contact:f.get("contact"),message:f.get("message")});status.textContent=error?"Sorry, your enquiry could not be sent. Please try again.":"Thank you. Your enquiry has been received.";if(!error)e.target.reset();});
