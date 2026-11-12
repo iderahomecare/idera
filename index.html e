@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IDERA Residential Care Home — A Place to Feel at Home. Care You Can Trust.">
+  <meta name="theme-color" content="#39234f">
+  <title>IDERA Residential Care Home | Care You Can Trust</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* IDERA brand colours and an always-visible hamburger navigation */
+    :root {
+      --purple: #39234f;
+      --plum: #513365;
+      --gold: #c5a46a;
+      --cream: #fbf8f2;
+      --ink: #302a35;
+      --muted: #706977;
+    }
+    body { background:#fff; }
+    .site-header { position:sticky; top:0; z-index:50; }
+    .menu-toggle {
+      display:inline-flex !important;
+      align-items:center; justify-content:center;
+      width:48px; height:44px; border:1px solid var(--gold);
+      border-radius:4px; color:var(--purple); background:#fff;
+      font-size:27px; cursor:pointer;
+    }
+    .site-header nav {
+      display:none; position:absolute; top:100%; right:5%; left:auto;
+      width:min(320px,90vw); padding:14px;
+      background:#fff; border:1px solid #eee5d8; border-top:3px solid var(--gold);
+      box-shadow:0 14px 35px #25152b20; border-radius:0 0 8px 8px;
+      flex-direction:column; align-items:stretch; gap:0;
+    }
+    .site-header nav.open { display:flex; }
+    .site-header nav a { display:block; padding:12px 14px; border-bottom:1px solid #f0ebf1; }
+    .site-header nav a:last-child { border-bottom:0; }
+    .site-header nav a.nav-cta { margin-top:8px; text-align:center; }
+    .hero { background:linear-gradient(110deg,#fbf8f2 55%,#eee5f1); }
+    .hero-art { background:linear-gradient(145deg,#d9c8b4,#eee4f1); }
+    .section-kicker { color:#a08049; }
+    .purpose { background:var(--purple); }
+    .value-grid article, .feature-grid article { border-radius:5px; }
+    .value-grid b { color:var(--gold); }
+    .contact-details p { margin:10px 0; }
+    .contact-details a { color:var(--plum); text-decoration:underline; text-decoration-color:var(--gold); }
+    .contact form button { width:max-content; }
+    .form-note { font-size:12px; color:var(--muted); }
+    .booking-band { background:var(--cream); text-align:center; padding:55px 7%; }
+    .booking-band h2 { color:var(--purple); font-family:'Playfair Display',serif; font-size:clamp(30px,4vw,42px); }
+    .booking-band p { max-width:650px; margin:0 auto 22px; color:var(--muted); }
+    .faq-list { max-width:900px; }
+    .faq-list details { padding:18px 0; border-bottom:1px solid #e9e1e9; }
+    .faq-list summary { cursor:pointer; color:var(--purple); font-weight:700; }
+    .faq-list details p { color:var(--muted); }
+    @media(max-width:520px) {
+      .site-header { padding:12px 5%; }
+      .site-header nav { right:5%; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="IDERA home">
+    <span class="brand-mark">I</span>
+    <span>IDERA<small>RESIDENTIAL CARE HOME</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav">☰</button>
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#story">About Us</a>
+    <a href="#mission">Our Purpose</a>
+    <a href="#values">Our Values</a>
+    <a href="#services">Our Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#booking">Book an Appointment</a>
+    <a href="#contact" class="nav-cta">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow">COMPASSION • DIGNITY • TRUST</p>
+      <h1>A place to feel at home.<br><em>Care you can trust.</em></h1>
+      <p>Compassionate residential care shaped by personal experience, professional commitment and the warmth of family values.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Make an enquiry</a>
+        <a class="btn btn-light" href="#story">Discover our story</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="art-card">
+        <span>IDERA</span>
+        <p>Every older person deserves to age with dignity, comfort, love and respect.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story" id="story">
+    <div class="section-kicker">THE HEART BEHIND IDERA</div>
+    <h2>Our Story</h2>
+    <h3>A personal experience. A greater purpose. A commitment to care.</h3>
+    <p>Idera Residential Care Home was born from a place of love, personal experience and a deep desire to make a difference in the lives of older people.</p>
+    <p>The inspiration behind Idera came from my personal journey of caring for my late mother and witnessing the challenges many families face when trying to find reliable care for their ageing parents in Nigeria.</p>
+    <p>Living abroad while having an elderly parent back home can be emotionally challenging. Like many families in the diaspora, we wanted the reassurance that our mother was safe, comfortable and receiving the care she deserved. However, finding dependable care was not always easy. We often had to make daily calls to check on her welfare, constantly worrying whether her needs were being properly met.</p>
+    <p>Through conversations with friends and other families living abroad, I realised that this was not just our experience. Many families shared the same concerns, the same anxieties and the same desire to find a place where their parents could be genuinely cared for.</p>
+    <p>It became clear that there was a need for more than just elderly accommodation. There was a need for a home built on trust, compassion, professionalism and dignity. That realisation became the foundation of Idera Residential Care Home.</p>
+    <p>Our ambition is to create a place where older people are not simply looked after but are valued, respected, celebrated and made to feel at home. A place where families can have confidence that their loved ones are receiving compassionate and professional attention, even when distance keeps them apart.</p>
+    <p>Guided by a Level 5 Diploma in Health and Social Care and inspired by UK care practices, we are committed to bringing a higher standard of elderly care to Nigeria while preserving the warmth, respect and family values that define our culture.</p>
+    <p>Idera is more than a care home; it is a promise born from personal experience. A promise that no family should have to live with constant worry about the care of their ageing loved ones, and that every older person deserves to age with dignity, comfort, love and respect.</p>
+    <blockquote><strong>Why We Started</strong><br>“We understand the worry because we have lived it. We created Idera to become the place we wished we had found for our own loved ones.”</blockquote>
+  </section>
+
+  <section class="purpose" id="mission">
+    <div>
+      <div class="section-kicker">OUR PURPOSE</div>
+      <h2>Our Mission</h2>
+      <p>To provide compassionate, professional and personalised care in a safe, comfortable and welcoming environment, where every resident is treated with dignity, respect and love, while giving families peace of mind wherever they may be.</p>
+    </div>
+    <div>
+      <div class="section-kicker">OUR FUTURE</div>
+      <h2>Our Vision</h2>
+      <p>To become one of the most trusted residential care homes in Lagos and Nigeria, raising the standard of elderly care by combining UK best practices with Nigerian family values, warmth and respect.</p>
+    </div>
+  </section>
+
+  <section class="section" id="values">
+    <div class="section-kicker">WHAT GUIDES US</div>
+    <h2>Our Core Values</h2>
+    <p class="intro">The IDERA name represents the principles at the heart of the care we aim to provide.</p>
+    <div class="value-grid">
+      <article><b>I</b><h3>Individualised Care</h3><p>Care tailored to every resident's needs.</p></article>
+      <article><b>D</b><h3>Dignity</h3><p>Preserving the worth and independence of every resident.</p></article>
+      <article><b>E</b><h3>Empathy</h3><p>Caring with kindness, patience and understanding.</p></article>
+      <article><b>R</b><h3>Respect</h3><p>Valuing every resident, their choices and beliefs.</p></article>
+      <article><b>A</b><h3>Assurance</h3><p>Giving families confidence, trust and peace of mind.</p></article>
+    </div>
+  </section>
+
+  <section class="section tinted" id="why">
+    <div class="section-kicker">WHY CHOOSE IDERA?</div>
+    <h2>Care that keeps families connected</h2>
+    <div class="feature-grid">
+      <article><h3>Trust and Transparency</h3><p>Regular family updates, photographs and video calls to help loved ones stay connected, even from abroad.</p></article>
+      <article><h3>Professional Care</h3><p>Level 5-qualified management, supported by trained, carefully vetted and supervised caregivers.</p></article>
+      <article><h3>Safety and Security</h3><p>A secure environment, appropriate supervision, medication management and health monitoring.</p></article>
+      <article><h3>A Home Away From Home</h3><p>Comfortable accommodation, nutritious meals, companionship, social activities and respect for individuals.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="section-kicker">PERSON-CENTRED SUPPORT</div>
+    <h2>Our Services</h2>
+    <p class="intro">We are committed to understanding each resident as an individual and discussing support needs with families. Please contact us to confirm the services currently available and whether they are suitable for your loved one.</p>
+    <div class="service-placeholder">Contact IDERA to discuss care options, availability and a visit.</div>
+  </section>
+
+  <section class="section tinted" id="gallery">
+    <div class="section-kicker">A GLIMPSE OF IDERA</div>
+    <h2>Our Gallery</h2>
+    <p class="intro">A look at our home, facilities and everyday moments. New photographs will appear here as they are published by the IDERA administrator.</p>
+    <div id="gallery-grid" class="gallery-grid"><p class="muted">Gallery photographs will appear here when they are published.</p></div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <div class="section-kicker">FAMILY AND COMMUNITY</div>
+    <h2>Testimonials</h2>
+    <p class="intro">We look forward to sharing feedback from families who have given permission for their comments to be published.</p>
+    <div class="service-placeholder">Approved testimonials will be added here.</div>
+  </section>
+
+  <section class="section tinted" id="faqs">
+    <div class="section-kicker">QUESTIONS & ANSWERS</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details><summary>How can I find out if IDERA is suitable for my loved one?</summary><p>Contact our team to discuss your family's needs and arrange a conversation or visit.</p></details>
+      <details><summary>Can family members living outside Nigeria contact IDERA?</summary><p>Yes. Families can contact us by phone, WhatsApp or email to ask questions and discuss next steps.</p></details>
+      <details><summary>Can I arrange a visit before making a decision?</summary><p>Please contact us to discuss and arrange a suitable visit.</p></details>
+      <details><summary>How do I ask about availability and fees?</summary><p>Send us an enquiry with your preferred contact details and we will discuss the information with you.</p></details>
+    </div>
+  </section>
+
+  <section class="booking-band" id="booking">
+    <div class="section-kicker">LET'S TAKE THE NEXT STEP</div>
+    <h2>Arrange a conversation with IDERA</h2>
+    <p>Speak with us about your questions, care options or arranging a visit. An appointment request is not confirmed until our team responds.</p>
+    <a class="btn" href="https://wa.me/2348140918472?text=Hello%20IDERA%2C%20I%20would%20like%20to%20ask%20about%20arranging%20a%20visit.">Request an appointment on WhatsApp</a>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="contact-details">
+      <div class="section-kicker">WE ARE HERE TO HELP</div>
+      <h2>Let's talk about care</h2>
+      <p>Whether you are exploring care options or would like to arrange a visit, we welcome your enquiry.</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348140918472">0814 091 8472</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+2348022517378">0802 251 7378</a></p>
+      <p><strong>Email:</strong> <a href="mailto:iderahomecare@gmail.com">iderahomecare@gmail.com</a></p>
+      <p><strong>Location:</strong> 7 Kennedy Thompsone Street, New Road, Awoyaya, Lekki Expressway, Lagos.</p>
+      <p><a class="btn" href="https://wa.me/2348140918472">Chat with us on WhatsApp</a></p>
+    </div>
+    <form id="enquiry-form">
+      <label>Your name<input name="name" required maxlength="100" autocomplete="name"></label>
+      <label>Email or phone<input name="contact" required maxlength="150" autocomplete="email"></label>
+      <label>How can we help?<textarea name="message" required maxlength="3000"></textarea></label>
+      <button class="btn" type="submit">Send enquiry</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <p class="form-note">Please do not include medical records or other sensitive health information in this form.</p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="#home"><span class="brand-mark">I</span><span>IDERA<small>RESIDENTIAL CARE HOME</small></span></a>
+  <p>A Place to Feel at Home. Care You Can Trust.</p>
+  <small>© <span id="year"></span> IDERA Residential Care Home. All rights reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script>
+  // Keeps the menu usable on every screen size and closes it after navigation.
+  const menuButton = document.querySelector(".menu-toggle");
+  const siteNav = document.querySelector(".site-header nav");
+  menuButton?.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    menuButton.textContent = isOpen ? "×" : "☰";
+  });
+  siteNav?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
+      menuButton?.setAttribute("aria-label", "Open navigation menu");
+      if (menuButton) menuButton.textContent = "☰";
+    });
+  });
+</script>
+</body>
+</html>
