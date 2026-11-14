@@ -1,32 +1,69 @@
 
 const cfg = window.IDERA_CONFIG || {};
 
-const ready =
+const db = window.supabase &&
   cfg.supabaseUrl &&
-  !cfg.supabaseUrl.startsWith("YOUR_") &&
-  cfg.supabaseAnonKey &&
-  !cfg.supabaseAnonKey.startsWith("YOUR_");
-
-const db = ready && window.supabase
-  ? window.supabase.createClient(
-      cfg.supabaseUrl,
-      cfg.supabaseAnonKey
-    )
-  : null;
+  cfg.supabaseAnonKey
+    ? window.supabase.createClient(
+        cfg.supabaseUrl,
+        cfg.supabaseAnonKey
+      )
+    : null;
 
 // Update footer year
 const year = document.getElementById("year");
-if (year) {
-  year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
+
+// Do not add a menu listener here.
+// index.html already controls the hamburger menu.
+
+// Enquiry form
+const form = document.getElementById("enquiry-form");
+
+if (form) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const status = document.getElementById("form-status");
+    const data = new FormData(form);
+
+    if (!db) {
+      status.textContent = "Supabase connection is not configured.";
+      return;
+    }
+
+    const enquiry = {
+      name: data.get("name"),
+      contact: data.get("contact"),
+      message: data.get("message")
+    };
+
+    status.textContent = "Sending your enquiry...";
+
+    try {
+      const { error } = await db
+        .from("enquiries")
+        .insert([enquiry]);
+
+      if (error) throw error;
+
+      status.textContent =
+        "Thank you! Your enquiry has been received.";
+
+      form.reset();
+
+    } catch (error) {
+      console.error("IDERA enquiry error:", error);
+
+      status.textContent =
+        "Submission error: " + error.message;
+    }
+  });
 }
 
-// IMPORTANT:
-// Do not add a hamburger-menu click listener here.
-// The menu is controlled by the inline script in index.html.
-
-// Load gallery images from Supabase
+// Gallery
 async function loadGallery() {
-  const grid = document.querySelector(".gallery-grid");
+  const grid = document.getElementById("gallery-grid");
 
   if (!grid || !db) return;
 
@@ -37,79 +74,24 @@ async function loadGallery() {
       .eq("published", true)
       .order("created_at", { ascending: false });
 
-    if (error || !data || !data.length) return;
+    if (error) throw error;
+
+    if (!data || !data.length) return;
 
     data.forEach((item) => {
       if (!item.image_url) return;
 
-      const card = document.createElement("article");
-      card.className = "gallery-item";
-
       const img = document.createElement("img");
       img.src = item.image_url;
-      img.alt = item.title || "IDERA gallery photograph";
+      img.alt = item.title || "IDERA gallery image";
       img.loading = "lazy";
 
-      const caption = document.createElement("p");
-      caption.textContent = item.title || item.description || "";
-
-      card.appendChild(img);
-      card.appendChild(caption);
-      grid.appendChild(card);
+      grid.appendChild(img);
     });
+
   } catch (error) {
-    console.error("Gallery loading error:", error);
+    console.error("IDERA gallery error:", error);
   }
 }
 
 loadGallery();
-
-// Enquiry form
-const enquiryForm = document.getElementById("enquiry-form");
-
-if (enquiryForm) {
-  enquiryForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const status = document.getElementById("form-status");
-
-    if (!status) return;
-
-    if (!db) {
-      status.textContent =
-        "The enquiry form is not connected yet. Please contact us directly.";
-      return;
-    }
-
-    const formData = new FormData(enquiryForm);
-
-    const name = formData.get("name");
-    const contact = formData.get("contact");
-    const message = formData.get("message");
-
-    if (!name || !contact || !message) {
-      status.textContent = "Please complete all fields.";
-      return;
-    }
-
-    status.textContent = "Sending your enquiry...";
-
-    try {
-      const { error } = await db
-        .from("enquiries")
-        .insert([{ name, contact, message }]);
-
-      if (error) throw error;
-
-      status.textContent =
-        "Thank you! Your enquiry has been received.";
-
-      enquiryForm.reset();
-    } catch (error) {
-      console.error("Enquiry submission error:", error);
-
-      status.textContent =
-        "Sorry, your enquiry could not be sent. Please try again.";
-    }
-  });
-}
