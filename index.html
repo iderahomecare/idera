@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,199 +7,1242 @@
   <meta name="description" content="IDERA Residential Care Home Services — A Place to Feel at Home. Care You Can Trust.">
   <meta name="theme-color" content="#421039">
   <title>IDERA Residential Care Home Services | Care You Can Trust</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--plum:#4a1041;--plum-dark:#31092d;--gold:#c49a42;--gold-light:#e3c77e;--cream:#fbf7ef;--blush:#f5e9e8;--ink:#302832;--muted:#766d75;--white:#fff;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body.menu-is-open{overflow:hidden}body{margin:0;color:var(--ink);font-family:var(--sans);line-height:1.7;background:#fff}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}.container{width:min(1160px,90%);margin:auto}.section{padding:88px 0}.kicker{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}.section-title{font:600 clamp(2.4rem,4vw,3.7rem)/1.05 var(--serif);color:var(--plum);margin:10px 0 18px}.section-intro{max-width:660px;color:var(--muted);margin:0 auto 42px}.center{text-align:center}
-    .topline{background:var(--plum-dark);color:#f7ead2;font-size:.78rem;padding:8px 0}.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .site-header{position:sticky;top:0;z-index:140;background:rgba(255,255,255,.97);box-shadow:0 5px 24px #2b14200c}.nav-wrap{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;min-width:0}.brand img{width:210px;height:76px;object-fit:contain;object-position:left center}.menu-toggle{width:48px;height:48px;border:1px solid #e6d6b8;background:var(--cream);color:var(--plum);border-radius:50%;font-size:25px;cursor:pointer;display:grid;place-items:center}.main-nav{display:none;z-index:120;max-height:calc(100vh - 110px);overflow-y:auto;position:absolute;top:100%;right:5%;width:min(340px,90vw);padding:12px;background:#fff;border:1px solid #eee4d8;border-top:3px solid var(--gold);box-shadow:0 18px 35px #27112620;border-radius:0 0 14px 14px;flex-direction:column}.main-nav.open{display:flex}.main-nav a{padding:11px 14px;border-bottom:1px solid #f1edf0;font-size:.9rem}.main-nav a:last-child{border:0}.main-nav a:hover{color:var(--gold);padding-left:20px;transition:padding .18s,color .18s}.nav-backdrop{position:fixed;inset:0;z-index:110;border:0;background:rgba(35,8,32,.48);backdrop-filter:blur(2px)}.nav-backdrop[hidden]{display:none}.menu-toggle{position:relative;z-index:130;box-shadow:0 5px 16px #4a10411a;transition:background .2s,transform .2s}.menu-toggle:hover{background:#f1e5d4;transform:rotate(4deg)}.menu-toggle:focus-visible,.main-nav a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-    .hero{position:relative;min-height:650px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(44,8,39,.88) 0%,rgba(55,10,48,.69) 48%,rgba(55,10,48,.12) 100%),url('idera-care-01.jpg') center 35%/cover no-repeat}.hero-content{padding:100px 0;max-width:700px}.hero .kicker{color:var(--gold-light)}.hero h1{font:600 clamp(3.4rem,7vw,6.4rem)/.92 var(--serif);margin:18px 0 22px;max-width:700px}.hero p{font-size:1.05rem;color:#f7edf5;max-width:560px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 23px;border-radius:3px;font-weight:700;font-size:.85rem;letter-spacing:.03em;transition:.2s}.btn-gold{background:var(--gold);color:#281323}.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}.btn-outline{border:1px solid #fff;color:#fff}.btn-outline:hover{background:#fff;color:var(--plum)}
-    .welcome-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center}.welcome-photo{position:relative;padding:0 22px 22px 0}.welcome-photo:after{content:"";position:absolute;right:0;bottom:0;width:72%;height:72%;background:var(--gold-light);z-index:0;border-radius:2px}.welcome-photo img{position:relative;z-index:1;width:100%;height:490px;object-fit:cover;border-radius:3px}.welcome-copy p{color:var(--muted)}.promise{margin-top:25px;background:var(--cream);border-left:4px solid var(--gold);padding:20px 23px;color:var(--plum);font:600 1.35rem/1.3 var(--serif)}
-    .values-band{background:var(--plum);color:#fff;padding:64px 0}.values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.value{text-align:center;padding:12px}.value b{display:block;color:var(--gold-light);font:700 2.2rem var(--serif)}.value h3{font:600 1.25rem var(--serif);margin:5px 0}.value p{font-size:.8rem;color:#eadfe8;margin:0}
-    .services{background:var(--cream)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service-card{background:#fff;box-shadow:0 12px 35px #3b17300c;overflow:hidden}.service-card img{width:100%;height:230px;object-fit:cover}.service-body{padding:24px}.service-body h3{font:600 1.65rem var(--serif);color:var(--plum);margin:0 0 8px}.service-body p{color:var(--muted);font-size:.92rem;margin:0}
-    .why{background:var(--plum-dark);color:#fff}.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.why-photo img{width:100%;height:470px;object-fit:cover;border-radius:3px}.why .section-title{color:#fff}.why p{color:#e7dce5}.why-list{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}.why-item{border-top:1px solid #ffffff35;padding-top:14px}.why-item strong{display:block;color:var(--gold-light);margin-bottom:5px}.why-item span{font-size:.87rem;color:#e6dce4}
-    .life-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.life-grid img{width:100%;height:420px;object-fit:cover}.life-copy p{color:var(--muted)}
-    .gallery{background:var(--blush)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery-grid img{width:100%;height:270px;object-fit:cover;border-radius:3px;transition:transform .3s}.gallery-grid img:hover{transform:scale(1.02)}
-    .story-band{background:var(--cream);text-align:center}.story-band .inner{max-width:790px;margin:auto}.story-band blockquote{margin:25px 0 0;color:var(--plum);font:600 clamp(1.6rem,3vw,2.5rem)/1.2 var(--serif)}
-    .faq-list{max-width:850px;margin:35px auto 0}.faq-list details{border-bottom:1px solid #e8dfd6;padding:18px 0}.faq-list summary{cursor:pointer;color:var(--plum);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:20px}.faq-list summary:after{content:"+";color:var(--gold);font-size:1.4rem}.faq-list details[open] summary:after{content:"−"}.faq-list p{color:var(--muted);margin:12px 0 0}
-    .booking{background:var(--cream);text-align:center;padding:68px 0}.booking h2{font:600 clamp(2.4rem,4vw,3.5rem)/1.05 var(--serif);color:var(--plum);margin:10px 0 15px}.booking p{max-width:660px;margin:0 auto 25px;color:var(--muted)}
-    .contact{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}.contact-copy p{color:var(--muted)}.contact-details{margin-top:24px}.contact-details p{margin:10px 0}.contact-details a{color:var(--plum);text-decoration:underline;text-decoration-color:var(--gold)}.contact-form{background:var(--cream);padding:30px}.contact-form label{display:block;font-size:.84rem;font-weight:700;color:var(--plum);margin-bottom:15px}.contact-form input,.contact-form textarea{display:block;width:100%;margin-top:6px;border:1px solid #e4d9d0;background:#fff;padding:13px;font:inherit;border-radius:2px}.contact-form textarea{min-height:125px;resize:vertical}.contact-form button{border:0;cursor:pointer}.form-note{font-size:.75rem;color:var(--muted)}#form-status{font-size:.88rem;color:var(--plum)}
-    footer{background:var(--plum-dark);color:#f4eaf2;padding:48px 0 25px}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-logo{width:230px;height:82px;object-fit:contain;background:#fff;border-radius:3px;padding:3px}.footer-tagline{font:600 1.5rem var(--serif);color:var(--gold-light)}.footer-bottom{border-top:1px solid #ffffff2b;margin-top:30px;padding-top:18px;font-size:.78rem;color:#d9cbd7;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.whatsapp{position:fixed;right:20px;bottom:20px;z-index:90;background:#247b51;color:#fff;padding:12px 17px;border-radius:30px;box-shadow:0 8px 25px #0003;font-size:.82rem;font-weight:700}
-    @media(max-width:850px){.welcome-grid,.why-grid,.life-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.welcome-photo img{height:390px}.values-grid{grid-template-columns:repeat(3,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.why-photo img{height:350px}.hero{min-height:590px}.hero-content{padding:80px 0}}
-    @media(max-width:560px){.topline .container{justify-content:center;text-align:center}.nav-wrap{min-height:76px}.brand img{width:170px;height:66px}.hero{min-height:600px;background-position:58% center}.hero-content{padding:72px 0}.hero h1{font-size:3.55rem}.section{padding:65px 0}.values-grid{grid-template-columns:repeat(2,1fr);gap:10px}.service-grid,.gallery-grid{grid-template-columns:1fr}.service-card img{height:240px}.gallery-grid img{height:260px}.why-list{grid-template-columns:1fr}.welcome-photo img{height:330px}.life-grid img{height:300px}.contact-form{padding:22px}.footer-top{justify-content:center;text-align:center}.footer-bottom{justify-content:center;text-align:center}.whatsapp{right:12px;bottom:12px}}
+    :root {
+      --plum: #4a1041;
+      --plum-dark: #31092d;
+      --gold: #c49a42;
+      --gold-light: #e3c77e;
+      --cream: #fbf7ef;
+      --blush: #f5e9e8;
+      --ink: #302832;
+      --muted: #766d75;
+      --white: #fff;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body.menu-is-open { overflow: hidden; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      background: #fff;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .section { padding: 88px 0; }
+
+    .kicker {
+      color: var(--gold);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font: 600 clamp(2.4rem, 4vw, 3.7rem)/1.05 var(--serif);
+      color: var(--plum);
+      margin: 10px 0 18px;
+    }
+
+    .section-intro {
+      max-width: 660px;
+      color: var(--muted);
+      margin: 0 auto 42px;
+    }
+
+    .center { text-align: center; }
+
+    .topline {
+      background: var(--plum-dark);
+      color: #f7ead2;
+      font-size: .78rem;
+      padding: 8px 0;
+    }
+
+    .topline .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 140;
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 5px 24px #2b14200c;
+    }
+
+    .nav-wrap {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 210px;
+      height: 76px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .menu-toggle {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #e6d6b8;
+      background: var(--cream);
+      color: var(--plum);
+      border-radius: 50%;
+      font-size: 25px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      position: relative;
+      z-index: 130;
+      box-shadow: 0 5px 16px #4a10411a;
+      transition: background .2s, transform .2s;
+    }
+
+    .menu-toggle:hover {
+      background: #f1e5d4;
+      transform: rotate(4deg);
+    }
+
+    .main-nav {
+      display: none;
+      z-index: 120;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      position: absolute;
+      top: 100%;
+      right: 5%;
+      width: min(340px, 90vw);
+      padding: 12px;
+      background: #fff;
+      border: 1px solid #eee4d8;
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 18px 35px #27112620;
+      border-radius: 0 0 14px 14px;
+      flex-direction: column;
+    }
+
+    .main-nav.open { display: flex; }
+
+    .main-nav a {
+      padding: 11px 14px;
+      border-bottom: 1px solid #f1edf0;
+      font-size: .9rem;
+    }
+
+    .main-nav a:last-child { border: 0; }
+
+    .main-nav a:hover {
+      color: var(--gold);
+      padding-left: 20px;
+      transition: padding .18s, color .18s;
+    }
+
+    .nav-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 110;
+      border: 0;
+      background: rgba(35,8,32,.48);
+      backdrop-filter: blur(2px);
+    }
+
+    .nav-backdrop[hidden] { display: none; }
+
+    .menu-toggle:focus-visible,
+    .main-nav a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(44,8,39,.88) 0%, rgba(55,10,48,.69) 48%, rgba(55,10,48,.12) 100%),
+        url('idera-care-01.jpg') center 35%/cover no-repeat;
+    }
+
+    .hero-content {
+      padding: 100px 0;
+      max-width: 700px;
+    }
+
+    .hero .kicker { color: var(--gold-light); }
+
+    .hero h1 {
+      font: 600 clamp(3.4rem, 7vw, 6.4rem)/.92 var(--serif);
+      margin: 18px 0 22px;
+      max-width: 700px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #f7edf5;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 23px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: .85rem;
+      letter-spacing: .03em;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #281323;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--plum);
+    }
   </style>
 </head>
+
 <body>
-  <div class="topline"><div class="container"><span>Compassionate residential care in Lagos, Nigeria</span><span>Call us: <a href="tel:+2348022517378">0802 251 7378</a></span></div></div>
+  <div class="topline">
+    <div class="container">
+      <span>Compassionate residential care in Lagos, Nigeria</span>
+      <span>Call us: <a href="tel:+2348022517378">0802 251 7378</a></span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="IDERA home"><img src="idera-logo.jpg" alt="IDERA Residential Care Home Services — A Place to Feel at Home. Care You Can Trust."></a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="main-nav" aria-expanded="false"><span class="menu-icon" aria-hidden="true">☰</span></button>
+      <a class="brand" href="#home" aria-label="IDERA home">
+        <img src="idera-logo.jpg" alt="IDERA Residential Care Home Services — A Place to Feel at Home. Care You Can Trust.">
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="main-nav"
+        aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#gallery">Gallery</a><a href="#testimonials">Testimonials / Customer Reviews</a><a href="#faqs">Questions &amp; Answers (FAQs)</a><a href="#appointment">Book an Appointment</a><a href="#contact">Contact Us</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials / Customer Reviews</a>
+        <a href="#faqs">Questions &amp; Answers (FAQs)</a>
+        <a href="#appointment">Book an Appointment</a>
+        <a href="#contact">Contact Us</a>
       </nav>
     </div>
   </header>
-  <button class="nav-backdrop" id="nav-backdrop" type="button" aria-label="Close navigation" hidden></button>
+
+  <button
+    class="nav-backdrop"
+    id="nav-backdrop"
+    type="button"
+    aria-label="Close navigation"
+    hidden>
+  </button>
+  
   <main>
-    <section class="hero" id="home"><div class="container"><div class="hero-content">
-      <div class="kicker">IDERA RESIDENTIAL CARE HOME SERVICES</div>
-      <h1>A Place to Feel at Home. Care You Can Trust.</h1>
-      <p>Compassionate, personalised care in a warm and welcoming environment, where every older person is valued, respected and supported.</p>
-      <div class="hero-actions"><a class="btn btn-gold" href="tel:+2348022517378">Call Us</a><a class="btn btn-outline" href="#about">Discover IDERA</a></div>
-    </div></div></section>
-
-    <section class="section" id="about"><div class="container welcome-grid">
-      <div class="welcome-photo"><img src="idera-care-02.jpg" alt="Caregiver supporting an older gentleman at home"></div>
-      <div class="welcome-copy"><div class="kicker">WELCOME TO IDERA</div><h2 class="section-title">Care that feels like family.</h2>
-        <p>IDERA Residential Care Home was born from love, personal experience and a desire to make a difference in the lives of older people.</p>
-        <p>Inspired by the experience of caring for a late mother and understanding the worries families face when seeking dependable care for ageing loved ones in Nigeria, IDERA was created to offer more than accommodation: a place built on trust, compassion, professionalism and dignity.</p>
-        <p>Our ambition is to create a home where older people are valued, respected and made to feel at home, while families have greater peace of mind even when distance keeps them apart.</p>
-        <div class="promise">“We understand the worry because we have lived it. We created IDERA to become the place we wished we had found for our own loved ones.”</div>
-      </div>
-    </div></section>
-
-    <section class="values-band"><div class="container values-grid">
-      <div class="value"><b>I</b><h3>Individualised Care</h3><p>Care tailored to every resident's needs.</p></div>
-      <div class="value"><b>D</b><h3>Dignity</h3><p>Preserving worth and independence.</p></div>
-      <div class="value"><b>E</b><h3>Empathy</h3><p>Kindness, patience and understanding.</p></div>
-      <div class="value"><b>R</b><h3>Respect</h3><p>Valuing choices and beliefs.</p></div>
-      <div class="value"><b>A</b><h3>Assurance</h3><p>Confidence, trust and peace of mind.</p></div>
-    </div></section>
-
-    <section class="section services" id="services"><div class="container">
-      <div class="center"><div class="kicker">HOW WE SUPPORT RESIDENTS</div><h2 class="section-title">Care with comfort and compassion</h2><p class="section-intro">Our approach places each resident's dignity, preferences and everyday wellbeing at the heart of care.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><img src="idera-care-03.jpg" alt="Caregiver supporting an older woman"><div class="service-body"><h3>Personalised Support</h3><p>Thoughtful day-to-day assistance shaped around individual needs, routines and preferences.</p></div></article>
-        <article class="service-card"><img src="idera-care-04.jpg" alt="Caregiver assisting an older woman with a meal"><div class="service-body"><h3>Daily Living Assistance</h3><p>Kind support with everyday activities, delivered with patience and respect.</p></div></article>
-        <article class="service-card"><img src="idera-care-05.jpg" alt="Caregiver spending a happy moment with an older woman"><div class="service-body"><h3>Companionship and Wellbeing</h3><p>Encouraging connection, conversation and meaningful moments every day.</p></div></article>
-      </div>
-    </div></section>
-
-    <section class="section why"><div class="container why-grid">
-      <div class="why-photo"><img src="idera-care-06.jpg" alt="Caregiver sharing a warm moment with an older gentleman"></div>
-      <div><div class="kicker">WHY FAMILIES CHOOSE IDERA</div><h2 class="section-title">A home built on trust.</h2><p>We believe good care is about more than meeting needs. It is about creating a safe, welcoming environment where people feel seen, heard and respected.</p>
-        <div class="why-list">
-          <div class="why-item"><strong>Trust and Transparency</strong><span>Family communication and updates to help loved ones stay connected.</span></div>
-          <div class="why-item"><strong>Professional Care</strong><span>Care guided by qualified management and trained, supervised caregivers.</span></div>
-          <div class="why-item"><strong>Safety and Security</strong><span>A focus on a safe environment and appropriate support.</span></div>
-          <div class="why-item"><strong>A Home Away From Home</strong><span>Comfort, companionship and respect for each individual.</span></div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="kicker">A Place to Feel at Home</span>
+          <h1>Care You Can Trust.</h1>
+          <p>
+            At IDERA Residential Care Home, we believe every individual
+            deserves compassionate care, dignity, comfort and a place
+            where they truly feel at home.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#appointment">Book an Appointment</a>
+            <a class="btn btn-outline" href="#about">Discover IDERA</a>
+          </div>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section class="section" id="life"><div class="container life-grid">
-      <div class="life-copy"><div class="kicker">LIFE AT IDERA</div><h2 class="section-title">Every day deserves warmth, connection and care.</h2><p>We want every resident to experience the comfort of being welcomed, listened to and treated as an individual. From everyday support to shared moments, our aim is to make each day feel a little more like home.</p><a class="btn btn-gold" href="#contact">Talk to Our Team</a></div>
-      <img src="idera-care-01.jpg" alt="An older woman smiling with a caregiver">
-    </div></section>
+    <!-- ABOUT US -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="idera-care-02.jpg" alt="Caregiver offering compassionate support to an elderly resident">
+          </div>
 
-    <section class="section gallery" id="gallery"><div class="container">
-      <div class="center"><div class="kicker">A GLIMPSE OF CARE</div><h2 class="section-title">Moments of kindness</h2><p class="section-intro">A selection of the care and companionship images shared for the IDERA website.</p></div>
-      <div class="gallery-grid" id="gallery-grid">
-        <img src="idera-care-01.jpg" alt="Older woman with caregiver">
-        <img src="idera-care-02.jpg" alt="Older man with caregiver">
-        <img src="idera-care-03.jpg" alt="Older woman with caregiver in a bright room">
-        <img src="idera-care-04.jpg" alt="Caregiver assisting an older woman with a meal">
-        <img src="idera-care-05.jpg" alt="Caregiver and older woman sharing a happy moment">
-        <img src="idera-care-06.jpg" alt="Caregiver and older man sharing a warm moment">
-      </div>
-    </div></section>
+          <div class="about-content">
+            <span class="kicker">Welcome to IDERA</span>
+            <h2 class="section-title">Care That Feels Like Home</h2>
 
-    <section class="section story-band" id="testimonials"><div class="container inner">
-      <div class="kicker">OUR PROMISE TO FAMILIES</div><h2 class="section-title">Care you can feel confident about.</h2>
-      <p class="section-intro">We value open communication and welcome families to speak with our team, ask questions and learn more about our approach before making a decision.</p>
-      <blockquote>“Every older person deserves to age with dignity, comfort, love and respect.”</blockquote>
-    </div></section>
+            <p>
+              IDERA Residential Care Home was inspired by a personal
+              experience of caring for a loved one and the understanding
+              that families, especially those living abroad, need a
+              trustworthy and compassionate care home for their loved ones
+              in Nigeria.
+            </p>
 
-    <section class="section" id="faqs"><div class="container">
-      <div class="center"><div class="kicker">QUESTIONS &amp; ANSWERS</div><h2 class="section-title">Frequently asked questions</h2></div>
-      <div class="faq-list">
-        <details><summary>How can I find out more about IDERA?</summary><p>Contact our team by phone, WhatsApp or email. We will be happy to answer your questions and explain our care approach.</p></details>
-        <details><summary>Can family members arrange a visit?</summary><p>Yes. Please contact us to discuss a suitable time. A visit is arranged only after our team confirms the details.</p></details>
-        <details><summary>Can families living outside Nigeria stay in touch?</summary><p>We understand how important communication is for families living abroad. Please speak with our team about available family update arrangements.</p></details>
-        <details><summary>How do I make an appointment?</summary><p>Use the appointment link below or contact us directly. Your request is not confirmed until a member of our team responds.</p></details>
-      </div>
-    </div></section>
+            <p>
+              We are committed to creating a welcoming environment where
+              residents are treated with kindness, dignity and respect.
+              Our approach is centred on individual needs, meaningful
+              relationships and the reassurance that every resident matters.
+            </p>
 
-    <section class="booking" id="appointment"><div class="container"><div class="kicker">LET'S TAKE THE NEXT STEP</div><h2>Arrange a conversation with IDERA</h2><p>Speak with us about your questions, care options or arranging a visit. We look forward to hearing from you.</p><a class="btn btn-gold" href="https://wa.me/2348140918472?text=Hello%20IDERA%2C%20I%20would%20like%20to%20ask%20about%20arranging%20a%20visit.">Request an Appointment</a></div></section>
+            <p>
+              At IDERA, care is more than a service. It is a commitment
+              to making people feel valued, safe, respected and at home.
+            </p>
 
-    <section class="section contact" id="contact"><div class="container contact-grid">
-      <div class="contact-copy"><div class="kicker">WE ARE HERE TO HELP</div><h2 class="section-title">Let's talk about care.</h2><p>Whether you are exploring care options or would like to arrange a visit, we welcome your enquiry.</p>
-        <div class="contact-details">
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348140918472">0814 091 8472</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+2348022517378">0802 251 7378</a></p>
-          <p><strong>Email:</strong> <a href="mailto:iderahomecare@gmail.com">iderahomecare@gmail.com</a></p>
-          <p><strong>Location:</strong> 7 Kennedy Thompsone Street, New Road, Awoyaya, Lekki Expressway, Lagos.</p>
-          <p><a class="btn btn-gold" href="https://wa.me/2348140918472">Chat with us on WhatsApp</a></p>
+            <a href="#services" class="btn btn-gold">Explore Our Services</a>
+          </div>
         </div>
       </div>
-      <form class="contact-form" id="enquiry-form">
-        <label>Your name<input name="name" required maxlength="100" autocomplete="name"></label>
-        <label>Email or phone<input name="contact" required maxlength="150" autocomplete="email"></label>
-        <label>How can we help?<textarea name="message" required maxlength="3000"></textarea></label>
-        <button class="btn btn-gold" type="submit">Send Enquiry</button>
-        <p id="form-status" role="status" aria-live="polite"></p>
-        <p class="form-note">Please do not include medical records or other sensitive health information in this form.</p>
-      </form>
-    </div></section>
+    </section>
+
+    <!-- IDERA VALUES -->
+    <section class="values-section">
+      <div class="container center">
+        <span class="kicker">What IDERA Stands For</span>
+        <h2 class="section-title">Our Promise of Care</h2>
+        <p class="section-intro">
+          Every letter in IDERA reflects the values that guide the way
+          we care for our residents.
+        </p>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <span>I</span>
+            <h3>Individualised Care</h3>
+            <p>Care that recognises each resident's unique needs and preferences.</p>
+          </div>
+
+          <div class="value-card">
+            <span>D</span>
+            <h3>Dignity</h3>
+            <p>Honouring every resident with compassion and consideration.</p>
+          </div>
+
+          <div class="value-card">
+            <span>E</span>
+            <h3>Empathy</h3>
+            <p>Understanding, kindness and genuine human connection.</p>
+          </div>
+
+          <div class="value-card">
+            <span>R</span>
+            <h3>Respect</h3>
+            <p>Recognising the worth, choices and individuality of everyone.</p>
+          </div>
+
+          <div class="value-card">
+            <span>A</span>
+            <h3>Assurance</h3>
+            <p>Giving families confidence through dependable and thoughtful care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="section services-section" id="services">
+      <div class="container center">
+        <span class="kicker">How We Can Help</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-intro">
+          Thoughtful support designed to promote comfort, dignity,
+          companionship and a better quality of life.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="idera-care-03.jpg" alt="Caregiver assisting an elderly resident">
+            <div class="service-content">
+              <h3>Residential Care</h3>
+              <p>
+                A welcoming living environment with support and attention
+                to residents' everyday needs.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="idera-care-04.jpg" alt="Caregiver spending time with an elderly resident">
+            <div class="service-content">
+              <h3>Personal Care Support</h3>
+              <p>
+                Respectful assistance with daily routines while promoting
+                independence and dignity.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="idera-care-05.jpg" alt="Elderly residents enjoying companionship">
+            <div class="service-content">
+              <h3>Companionship and Wellbeing</h3>
+              <p>
+                Encouraging social connection, meaningful activities
+                and emotional wellbeing.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE IDERA -->
+    <section class="section why-section">
+      <div class="container why-grid">
+        <div class="why-image">
+          <img src="idera-care-06.jpg" alt="Caregiver providing attentive support to a resident">
+        </div>
+
+        <div class="why-content">
+          <span class="kicker">The IDERA Difference</span>
+          <h2 class="section-title">Why Families Choose IDERA</h2>
+
+          <p>
+            Choosing a care home for someone you love is an important
+            decision. We understand the trust families place in us.
+          </p>
+
+          <ul class="why-list">
+            <li>Compassionate and respectful approach to care</li>
+            <li>Attention to individual needs and preferences</li>
+            <li>A warm and welcoming home environment</li>
+            <li>Respect for residents' dignity and independence</li>
+            <li>Communication and reassurance for families</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-gold">Talk to Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIFE AT IDERA -->
+    <section class="section life-section">
+      <div class="container life-grid">
+        <div>
+          <span class="kicker">A Home Filled With Care</span>
+          <h2 class="section-title">Life at IDERA</h2>
+          <p>
+            We want every resident to experience a sense of belonging.
+            From everyday support to companionship and shared moments,
+            we aim to create an environment where people feel comfortable,
+            appreciated and included.
+          </p>
+          <p>
+            Because everyone deserves to feel at home.
+          </p>
+          <a href="#gallery" class="btn btn-gold">View Our Gallery</a>
+        </div>
+
+        <div class="life-image">
+          <img src="idera-care-01.jpg" alt="A warm and welcoming care environment">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container center">
+        <span class="kicker">Moments That Matter</span>
+        <h2 class="section-title">Life, Care and Companionship</h2>
+        <p class="section-intro">
+          A glimpse into the warmth, care and companionship that
+          inspire the IDERA experience.
+        </p>
+
+        <div class="gallery-grid">
+          <img src="idera-care-01.jpg" alt="IDERA care gallery image 1">
+          <img src="idera-care-02.jpg" alt="IDERA care gallery image 2">
+          <img src="idera-care-03.jpg" alt="IDERA care gallery image 3">
+          <img src="idera-care-04.jpg" alt="IDERA care gallery image 4">
+          <img src="idera-care-05.jpg" alt="IDERA care gallery image 5">
+          <img src="idera-care-06.jpg" alt="IDERA care gallery image 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container center">
+        <span class="kicker">Your Trust Matters</span>
+        <h2 class="section-title">Testimonials &amp; Customer Reviews</h2>
+        <p class="section-intro">
+          We value the trust families place in IDERA. Our commitment
+          is to provide care that residents and their loved ones can
+          feel confident about.
+        </p>
+
+        <div class="testimonial-note">
+          <span class="quote-mark">“</span>
+          <h3>Every Resident Matters</h3>
+          <p>
+            Our promise is to make every resident feel respected,
+            supported and at home.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ SECTION -->
+    <section class="section faq-section" id="faqs">
+      <div class="container">
+        <div class="center">
+          <span class="kicker">Questions & Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-intro">
+            Here are answers to some questions families may have about IDERA.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is IDERA Residential Care Home?</summary>
+            <p>
+              IDERA is a residential care home focused on providing a
+              welcoming environment, compassionate support and dignity
+              for residents.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where is IDERA located?</summary>
+            <p>
+              We are located at 7 Kennedy Thompsone Street, New Road,
+              Awoyaya, Lekki Expressway, Lagos, Nigeria.
+            </p>
+          </details>
+
+          <details>
+            <summary>How can I enquire about admission?</summary>
+            <p>
+              You can contact us by phone, WhatsApp or email, or submit
+              an enquiry through the appointment form on this website.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can families living abroad contact IDERA?</summary>
+            <p>
+              Yes. Families living abroad can contact our team by phone,
+              WhatsApp or email to discuss their loved one's care needs.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I visit before making a decision?</summary>
+            <p>
+              Please contact our team to discuss arranging a visit
+              and learning more about the home.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT SECTION -->
+    <section class="section appointment-section" id="appointment">
+      <div class="container appointment-grid">
+        <div class="appointment-copy">
+          <span class="kicker">Let's Talk</span>
+          <h2 class="section-title">Book an Appointment</h2>
+          <p>
+            We understand that choosing a residential care home is
+            an important decision. Get in touch with us to discuss
+            your needs, ask questions or arrange a visit.
+          </p>
+          <p>
+            Our team will be happy to hear from you.
+          </p>
+        </div>
+
+        <form class="enquiry-form" id="enquiry-form">
+          <h3>Send Us an Enquiry</h3>
+
+          <label for="visitor-name">Full Name</label>
+          <input
+            type="text"
+            id="visitor-name"
+            name="name"
+            placeholder="Enter your full name"
+            required>
+
+          <label for="visitor-contact">Phone Number or Email</label>
+          <input
+            type="text"
+            id="visitor-contact"
+            name="contact"
+            placeholder="How can we reach you?"
+            required>
+
+          <label for="visitor-message">How Can We Help?</label>
+          <textarea
+            id="visitor-message"
+            name="message"
+            rows="5"
+            placeholder="Tell us a little about your enquiry"
+            required></textarea>
+
+          <button class="btn btn-gold" type="submit">
+            Submit Enquiry
+          </button>
+
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container center">
+        <span class="kicker">We Are Here for You</span>
+        <h2 class="section-title">Contact IDERA</h2>
+        <p class="section-intro">
+          Reach out to us. We would be glad to answer your questions
+          and help you understand our care services.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span class="contact-icon">☎</span>
+            <h3>Call Us</h3>
+            <a href="tel:+2348022517378">0802 251 7378</a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-icon">✉</span>
+            <h3>Email Us</h3>
+            <a href="mailto:iderahomecare@gmail.com">
+              iderahomecare@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-icon">⌖</span>
+            <h3>Visit Us</h3>
+            <p>
+              7 Kennedy Thompsone Street, New Road,
+              Awoyaya, Lekki Expressway, Lagos.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-icon">◉</span>
+            <h3>WhatsApp</h3>
+            <a
+              href="https://wa.me/2348140918472"
+              target="_blank"
+              rel="noopener">
+              Chat with us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="container">
-    <div class="footer-top"><img class="footer-logo" src="idera-logo.jpg" alt="IDERA Residential Care Home logo"><div class="footer-tagline">A Place to Feel at Home.<br>Care You Can Trust.</div></div>
-    <div class="footer-bottom"><span>© <span id="year"></span> IDERA Residential Care Home Services. All rights reserved.</span><span>Compassion • Dignity • Respect</span></div>
-  </div></footer>
-  <a class="whatsapp" href="https://wa.me/2348140918472" aria-label="Chat with IDERA on WhatsApp">WhatsApp Us</a>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h2>IDERA</h2>
+        <p>A Place to Feel at Home. Care You Can Trust.</p>
+      </div>
 
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> IDERA Residential Care Home.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING LINK -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/2348140918472"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with IDERA on WhatsApp">
+    WhatsApp
+  </a>
+
+  <!-- RESPONSIVE STYLES -->
+  <style>
+    .about-grid,
+    .why-grid,
+    .life-grid,
+    .appointment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image img,
+    .why-image img,
+    .life-image img {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .about-content p,
+    .why-content p,
+    .life-grid p,
+    .appointment-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .values-section,
+    .gallery-section,
+    .faq-section {
+      background: var(--cream);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .value-card {
+      background: #fff;
+      padding: 28px 17px;
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 8px 25px #30102b0b;
+    }
+
+    .value-card span {
+      display: block;
+      font: 700 3rem var(--serif);
+      color: var(--gold);
+    }
+
+    .value-card h3 {
+      color: var(--plum);
+      font: 600 1.35rem var(--serif);
+      margin: 8px 0;
+    }
+
+    .value-card p,
+    .service-card p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: left;
+    }
+
+    .service-card {
+      background: #fff;
+      box-shadow: 0 10px 30px #30102b10;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .service-content { padding: 23px; }
+
+    .service-content h3 {
+      color: var(--plum);
+      font: 600 1.6rem var(--serif);
+      margin: 0 0 8px;
+    }
+
+    .why-section { background: var(--blush); }
+
+    .why-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0 30px;
+    }
+
+    .why-list li {
+      padding: 9px 0 9px 29px;
+      position: relative;
+      color: var(--ink);
+    }
+
+    .why-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 4px;
+      transition: transform .25s;
+    }
+
+    .gallery-grid img:hover { transform: scale(1.025); }
+
+    .testimonials-section {
+      background: var(--plum);
+      color: #fff;
+    }
+
+    .testimonials-section .section-title { color: #fff; }
+    .testimonials-section .section-intro { color: #eadde8; }
+
+    .testimonial-note {
+      max-width: 650px;
+      margin: auto;
+      padding: 35px;
+      border: 1px solid #c49a4266;
+      background: #ffffff0b;
+    }
+
+    .quote-mark {
+      color: var(--gold-light);
+      font: 4rem var(--serif);
+      line-height: 1;
+    }
+
+    .testimonial-note h3 {
+      font: 600 2rem var(--serif);
+      color: var(--gold-light);
+    }
+
+    .testimonial-note p { color: #f5eaf3; }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-list details {
+      background: #fff;
+      margin: 12px 0;
+      padding: 18px 22px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .faq-list summary {
+      color: var(--plum);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-list details p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .appointment-section { background: var(--blush); }
+
+    .enquiry-form {
+      background: #fff;
+      padding: 35px;
+      box-shadow: 0 12px 35px #30102b12;
+    }
+
+    .enquiry-form h3 {
+      color: var(--plum);
+      font: 600 2rem var(--serif);
+      margin: 0 0 20px;
+    }
+
+    .enquiry-form label {
+      display: block;
+      color: var(--ink);
+      font-size: .85rem;
+      font-weight: 700;
+      margin: 15px 0 6px;
+    }
+
+    .enquiry-form input,
+    .enquiry-form textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #e5dce2;
+      border-radius: 3px;
+      font: 400 .9rem var(--sans);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .enquiry-form input:focus,
+    .enquiry-form textarea:focus {
+      outline: 2px solid var(--gold-light);
+      border-color: var(--gold);
+    }
+
+    .enquiry-form button {
+      border: 0;
+      cursor: pointer;
+      margin-top: 18px;
+    }
+
+    #form-status {
+      color: var(--plum);
+      font-size: .88rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      padding: 25px 16px;
+      background: var(--cream);
+      border-bottom: 3px solid var(--gold);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-icon {
+      color: var(--gold);
+      font-size: 2rem;
+    }
+
+    .contact-card h3 {
+      color: var(--plum);
+      font: 600 1.4rem var(--serif);
+      margin: 8px 0;
+    }
+
+    .contact-card a,
+    .contact-card p {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .contact-card a:hover { color: var(--gold); }
+
+    .site-footer {
+      background: var(--plum-dark);
+      color: #fff;
+      padding: 45px 0 25px;
+      text-align: center;
+    }
+
+    .site-footer h2 {
+      color: var(--gold-light);
+      font: 700 2.5rem var(--serif);
+      margin: 0;
+      letter-spacing: .12em;
+    }
+
+    .site-footer p { color: #e9dce7; }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 25px 0;
+    }
+
+    .footer-links a { font-size: .85rem; }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .copyright {
+      border-top: 1px solid #ffffff25;
+      padding-top: 20px;
+      font-size: .78rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 100;
+      background: #168b53;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: .82rem;
+      box-shadow: 0 5px 18px #0003;
+    }
+
+    @media (max-width: 900px) {
+      .values-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .why-grid, .life-grid, .appointment-grid {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section { padding: 65px 0; }
+      .topline .container { justify-content: center; text-align: center; }
+      .nav-wrap { min-height: 74px; }
+      .brand img { width: 165px; height: 65px; }
+      .hero { min-height: 590px; background-position: 58% center; }
+      .hero-content { padding: 75px 0; }
+      .hero h1 { font-size: 3.7rem; }
+      .about-grid, .why-grid, .life-grid, .appointment-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-image img, .why-image img, .life-image img {
+        height: 320px;
+      }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card img { height: 240px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid img { height: 175px; }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .enquiry-form { padding: 24px; }
+      .footer-links { gap: 14px; }
+    }
+
+    @media (max-width: 390px) {
+      .values-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 3.1rem; }
+      .gallery-grid img { height: 145px; }
+    }
+  </style>
+
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="config.js"></script>
-  <script src="app.js"></script>
+
   <script>
     (function () {
-      var button = document.getElementById('menu-toggle');
-      var nav = document.getElementById('main-nav');
-      var backdrop = document.getElementById('nav-backdrop');
-      var icon = button ? button.querySelector('.menu-icon') : null;
+      // SINGLE HAMBURGER MENU CONTROLLER
+      const button = document.getElementById('menu-toggle');
+      const nav = document.getElementById('main-nav');
+      const backdrop = document.getElementById('nav-backdrop');
+      const icon = button ? button.querySelector('.menu-icon') : null;
+
+      function setMenuOpen(isOpen, returnFocus) {
+        if (!button || !nav || !backdrop) return;
+
+        nav.classList.toggle('open', isOpen);
+        backdrop.hidden = !isOpen;
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.setAttribute(
+          'aria-label',
+          isOpen ? 'Close navigation menu' : 'Open navigation menu'
+        );
+
+        if (icon) icon.textContent = isOpen ? '×' : '☰';
+
+        document.body.classList.toggle('menu-is-open', isOpen);
+
+        if (isOpen) {
+          const firstLink = nav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        } else if (returnFocus) {
+          button.focus();
+        }
+      }
 
       if (button && nav && backdrop) {
-        function setMenuOpen(isOpen, returnFocus) {
-          nav.classList.toggle('open', isOpen);
-          backdrop.hidden = !isOpen;
-          button.setAttribute('aria-expanded', String(isOpen));
-          button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-          if (icon) icon.textContent = isOpen ? '×' : '☰';
-          document.body.classList.toggle('menu-is-open', isOpen);
-
-          if (isOpen) {
-            var firstLink = nav.querySelector('a');
-            if (firstLink) firstLink.focus();
-          } else if (returnFocus) {
-            button.focus();
-          }
-        }
-
         button.addEventListener('click', function () {
-          setMenuOpen(button.getAttribute('aria-expanded') !== 'true', false);
+          const isCurrentlyOpen =
+            button.getAttribute('aria-expanded') === 'true';
+          setMenuOpen(!isCurrentlyOpen, false);
         });
+
         backdrop.addEventListener('click', function () {
           setMenuOpen(false, true);
         });
+
         nav.querySelectorAll('a').forEach(function (link) {
           link.addEventListener('click', function () {
             setMenuOpen(false, false);
           });
         });
+
         document.addEventListener('keydown', function (event) {
-          if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+          if (
+            event.key === 'Escape' &&
+            button.getAttribute('aria-expanded') === 'true'
+          ) {
             setMenuOpen(false, true);
           }
         });
+
         setMenuOpen(false, false);
       }
 
-      var year = document.getElementById('year');
+      // FOOTER YEAR
+      const year = document.getElementById('year');
       if (year) year.textContent = new Date().getFullYear();
+
+      // SUPABASE ENQUIRY FORM
+      const form = document.getElementById('enquiry-form');
+      const status = document.getElementById('form-status');
+
+      if (form) {
+        form.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById('visitor-name').value.trim();
+          const contact = document.getElementById('visitor-contact').value.trim();
+          const message = document.getElementById('visitor-message').value.trim();
+
+          if (!name || !contact || !message) {
+            status.textContent = 'Please complete all fields.';
+            return;
+          }
+
+          const config = window.IDERA_CONFIG;
+
+          if (!window.supabase || !config ||
+              !config.supabaseUrl || !config.supabaseAnonKey) {
+            status.textContent =
+              'Thank you for your enquiry. Please contact us directly by phone or WhatsApp.';
+            return;
+          }
+
+          status.textContent = 'Sending your enquiry...';
+
+          try {
+            const client = window.supabase.createClient(
+              config.supabaseUrl,
+              config.supabaseAnonKey
+            );
+
+            const { error } = await client
+              .from('enquiries')
+              .insert([{ name, contact, message }]);
+
+            if (error) throw error;
+
+            status.textContent =
+              'Thank you! Your enquiry has been received.';
+            form.reset();
+          } catch (error) {
+            console.error('IDERA enquiry error:', error);
+            status.textContent =
+              'We could not submit your enquiry. Please contact us by phone or WhatsApp.';
+          }
+        });
+      }
+
+      // SUPABASE GALLERY
+      async function loadGallery() {
+        const gallery = document.querySelector('.gallery-grid');
+        const config = window.IDERA_CONFIG;
+
+        if (!gallery || !window.supabase || !config ||
+            !config.supabaseUrl || !config.supabaseAnonKey) return;
+
+        try {
+          const client = window.supabase.createClient(
+            config.supabaseUrl,
+            config.supabaseAnonKey
+          );
+
+          const { data, error } = await client
+            .from('gallery_items')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+          if (error || !data || !data.length) return;
+
+          data.forEach(function (item) {
+            if (!item.image_url) return;
+
+            const image = document.createElement('img');
+            image.src = item.image_url;
+            image.alt = item.title || 'IDERA care home gallery image';
+            image.loading = 'lazy';
+            gallery.appendChild(image);
+          });
+        } catch (error) {
+          console.error('IDERA gallery error:', error);
+        }
+      }
+
+      loadGallery();
     })();
   </script>
 </body>
